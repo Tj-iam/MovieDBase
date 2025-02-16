@@ -18,10 +18,11 @@ export default {
 </script>
 
 <template>
-  <div id="header">
-    <UpperNav></UpperNav>
-  </div>
-  <div id="parent">
+  <div id="main">
+    <div id="header">
+      <UpperNav></UpperNav>
+    </div>
+
     <div id="main-content">
 
       <router-view/>
@@ -31,11 +32,11 @@ export default {
 
 </template>
 
-<style scoped>
-* {
+<style>
 
+
+#main {
   margin: 0;
-  background-color: rgb(15, 15, 15);
 
 }
 
@@ -45,26 +46,21 @@ export default {
   height: fit-content;
   position: fixed;
   z-index: 999;
-  max-width: 100%;
-  min-width: 98%;
-
-}
-
-#parent {
-
   width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0;
+
 }
+
 
 #main-content {
+  background-color: rgb(15, 15, 15);
+  margin: 0;
   position: relative;
-  width: 100%;
-  height: auto !important;
-  padding-left: 200px; /* padding-left must be the same as sidebar width */
+  width: 100% !important;
+  height: fit-content !important;
+  padding-left: 50px; /* padding-left must be the same as sidebar width */
   padding-top: 80px;
 
-
 }
+
+
 </style>

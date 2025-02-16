@@ -23,7 +23,6 @@ export default {
 
   async mounted() {
     await axios.get(this.url, this.options).then(response => (this.list = response.data.results));
-    console.log(this.list)
   },
   methods: {
     getDetail() {
@@ -58,7 +57,7 @@ export default {
           v-slot="{ isSelected, toggle }"
       >
 
-        <div class="card m-3">
+        <div class="card m-2">
 
           <img
               :id="movie.id"
@@ -113,10 +112,10 @@ star
   transform: scale(1.05);
 }
 
-h5, span {
+h5, span, .card-body {
   color: white;
   font-size: 13px;
-
+  background-color: #1e1e1e;
 }
 
 
@@ -147,11 +146,15 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
+  * {
+    margin: 0;
+  }
+
   .card {
     background-color: #1e1e1e;
     border: none;
     width: 9rem;
-    height: 22rem;
+    height: 21rem;
     transition: 0.4s;
     filter: brightness(85%);
 
@@ -165,4 +168,45 @@ button {
   }
 }
 
+@media screen and (max-width: 768px) {
+
+
+  .card {
+    background-color: var(--card-backgroundcolor);
+    border: none;
+    width: 8rem;
+    height: 18rem;
+    transition: 0.4s;
+    filter: brightness(85%);
+
+
+  }
+
+  h5, span {
+
+    font-size: 11px;
+
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+
+  .card {
+    background-color: #1e1e1e;
+    border: none;
+    width: 8rem;
+    height: 18rem;
+    transition: 0.4s;
+    filter: brightness(85%);
+
+
+  }
+
+  h5, span {
+
+    font-size: 11px;
+
+  }
+}
 </style>

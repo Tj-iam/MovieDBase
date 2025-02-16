@@ -4,8 +4,8 @@ export default {
   methods: {
     seePeople() {
       this.castid = event.currentTarget.id
+      localStorage.setItem('peopleid', this.castid)
       console.log(this.castid)
-      localStorage.setItem("peopleid", this.castid)
       window.location = '/details/people'
     }
   }
@@ -15,7 +15,7 @@ export default {
 <template>
   <h1 class="sequence-title">Cast</h1>
   <v-sheet
-      class="mx-auto"
+      class="mx-100%"
       max-width="100%"
 
   >
@@ -52,10 +52,12 @@ export default {
 </template>
 
 <style scoped>
+
 .sequence-title {
   margin: auto;
   color: red;
   text-align: center;
+
 }
 
 .card {

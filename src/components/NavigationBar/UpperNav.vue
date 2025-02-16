@@ -330,5 +330,35 @@ search
 
     }
   }
+
+  @media screen and (max-width: 425px) {
+    .container-fluid {
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      max-width: 70%;
+      justify-content: left;
+      height: fit-content;
+    }
+
+    .nav-item {
+      a {
+        font-size: 8px;
+      }
+    }
+
+    .d-flex {
+      width: 50%;
+    }
+
+    .logo {
+      span {
+        font-size: 15px;
+
+
+      }
+    }
+  }
+
 }
 </style>

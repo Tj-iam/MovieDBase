@@ -36,7 +36,6 @@ export default {
   methods: {
     getDetail() {
       this.detailsid = event.currentTarget.id;
-      console.log(event.target.className)
       if (event.target.className === "movie") {
         localStorage.setItem('mediaId', this.detailsid)
         localStorage.setItem('mediaType', 'movie')

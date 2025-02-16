@@ -2,15 +2,7 @@
 
 export default {
   props: ['movieinfo', 'moviekey', 'movieimages'],
-  methods: {
-    seeImages() {
-
-      localStorage.setItem("images", JSON.stringify(this.movieimages));
-      window.location = '/details/images'
-
-
-    },
-  }
+  methods: {}
 }
 
 </script>
@@ -20,9 +12,9 @@ export default {
        class="background">
     <div v-if="typeof movieinfo!== 'undefined'"
          class="main">
-      <h1 class="title">{{ movieinfo.title }}</h1>
-      <a class="release_date">{{ movieinfo.release_date }}</a>
-      <a class="runtime">{{ movieinfo.runtime }} min</a>
+      <h1 class="title">{{ movieinfo.title }}{{ movieinfo.name }}</h1>
+      <a class="release_date">{{ movieinfo.release_date }}{{ movieinfo.first_airdate }}</a>
+      <a class="runtime">{{ movieinfo.runtime }}{{ movieinfo.episode_run_time }} min</a>
       <a class="vote">{{ movieinfo.vote_average }} /10 <span class="material-symbols-outlined">
 star
 </span></a>
@@ -88,6 +80,12 @@ photo_library
 </template>
 
 <style scoped>
+
+
+.background {
+  width: 100%;
+}
+
 .main {
   max-width: 100%;
   margin: auto;
@@ -157,6 +155,7 @@ photo_library
 .gallery {
   text-align: center;
   color: white;
+
 }
 
 .elements {
@@ -243,6 +242,7 @@ iframe {
   font-family: "Alata", sans-serif;
   font-weight: 200;
   text-align: left;
+  width: 100%;
 }
 
 .sequence-title {

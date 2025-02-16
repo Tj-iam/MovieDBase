@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import axios from "axios";
 
 export default {
@@ -55,7 +55,7 @@ export default {
       mode="manual"
       @load="load"
   >
-    <div class="row row-cols-1 row-cols-md-6 g-4">
+    <div class="row row-cols-1 row-cols-md-5 g-4">
       <div v-for="list in this.list">
         <div class="card">
 

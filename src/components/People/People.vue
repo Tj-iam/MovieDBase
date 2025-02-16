@@ -36,7 +36,6 @@ export default {
 
       await axios.get("https://api.themoviedb.org/3/person/popular?language=en-US&page=" + this.pageIndex, this.options).then(response => (this.item = response.data.results));
       setTimeout(() => {
-        console.log(this.item)
         this.peoplelist.push(...this.item);
         done('ok')
       }, 1000)

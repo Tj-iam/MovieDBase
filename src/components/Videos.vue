@@ -6,9 +6,6 @@ export default {
       videokey: ''
     }
   },
-  async mounted() {
-    console.log(this.movievideo)
-  },
   methods: {
     getkey() {
       this.videokey = event.currentTarget.id

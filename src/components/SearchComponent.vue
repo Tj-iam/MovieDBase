@@ -22,8 +22,6 @@ export default {
 
     getDetail() {
       this.detailsid = event.currentTarget.id
-      console.log(event.currentTarget.className);
-
       if (event.currentTarget.className === 'movie') {
         localStorage.setItem('mediaId', this.detailsid)
         localStorage.setItem('mediaType', event.currentTarget.className)
@@ -136,14 +134,16 @@ star
 </template>
 
 <style scoped>
-template {
+* {
+  background-color: rgb(15, 15, 15);
 }
 
+
 .card {
-  background-color: #181818;
+  background-color: #302e2e;
   border: none;
   width: 15rem;
-  height: 26rem;
+  height: 30rem;
   transition: 0.4s;
   filter: brightness(70%);
   margin-top: 20px;

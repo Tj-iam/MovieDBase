@@ -78,7 +78,8 @@ export default {
 
 
     >
-      <div class="position-absolute bottom-0 left-0 rounded-lg pa-3 d-inline-block me-2" style="margin-bottom: 0px">
+      <div class="position-absolute bottom-0 left-0 rounded-lg pa-3 d-inline-block me-2"
+           style="margin-bottom: 0px;background-color:transparent">
         <img
             :id="movie.id"
             :src="img + movie.poster_path"
@@ -92,10 +93,14 @@ export default {
   </v-carousel>
 </template>
 <style scoped>
+* {
+ 
+}
 
 .carousel {
   max-width: 70% !important;
   margin: auto;
+
 
 }
 
@@ -107,6 +112,7 @@ export default {
   width: 15%;
   border-radius: 10%;
   object-fit: cover;
+
 }
 
 

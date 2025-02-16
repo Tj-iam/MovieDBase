@@ -72,7 +72,9 @@ export default {
 
 </template>
 
-<style scoped>
-
+<style>
+body {
+  width: 100%;
+}
 
 </style>

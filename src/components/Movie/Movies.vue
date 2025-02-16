@@ -55,10 +55,6 @@ export default {
   max-width: 100%;
 }
 
-* {
-  max-width: 100%;
-
-}
 
 @media screen and (max-width: 1024px) {
   .sequence-title {
